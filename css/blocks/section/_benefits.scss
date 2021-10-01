@@ -1,0 +1,61 @@
+.benefits-section {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    bottom: rem(-20px);
+    left: 28%;
+    content: url("../img/benefits/vector.png");
+
+    @include tablets {
+      left: 5%;
+    }
+  }
+}
+
+.benefits {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.benefits__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+
+  @include phones {
+    padding: 0;
+    margin-bottom: rem(20px);
+  }
+
+  &:before {
+    content: url("../img/benefits/points.png");
+    position: absolute;
+    top: rem(50px);
+    right: 0;
+    transform: translate(50%);
+
+    @include tablets {
+      display: none;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}

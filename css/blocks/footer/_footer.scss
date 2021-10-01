@@ -1,0 +1,58 @@
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__desc {
+  font-size: rem(18px);
+  padding-left: 8%;
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.foter__desc--adress {
+  margin-bottom: rem(3px);
+}
+
+.footer__socials {
+  padding-right: 10%;
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+.social__item {
+  width: rem(30px);
+  height: rem(30px);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: rem(10px);
+  fill: #B3B3B3;
+  border-radius: 50%;
+
+  @include phones {
+    width: rem(24px);
+    height: rem(24px);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    fill: #000; 
+  }
+}
+
+

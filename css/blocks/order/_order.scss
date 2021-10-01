@@ -1,0 +1,23 @@
+.order-section {
+  background-color: #181818;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: rem(-23px);
+    right: 30%;
+    content: url("../img/order/polygon.png");
+
+    @include tablets {
+      right: 10%;
+    }
+  }
+}
+
+.section__title-order {
+  margin-bottom: rem(80px);
+
+  @include tablets {
+    margin-bottom: rem(32px);
+  }
+}
