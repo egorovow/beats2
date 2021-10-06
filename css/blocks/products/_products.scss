@@ -78,7 +78,7 @@
 .product__img {
   width: 100%;
   height: rem(452px);
-  background: url("../img/products/ellipse.png") center / 118% auto no-repeat;;
+  content: url("../img/products/ellipse.png");
   border-radius: 50%;
 
   @include tablets {
