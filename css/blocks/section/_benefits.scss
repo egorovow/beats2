@@ -1,16 +1,16 @@
 .benefits-section {
   position: relative;
 
-  &:before {
-    position: absolute;
-    bottom: rem(-20px);
-    left: 28%;
-    content: url("../img/benefits/vector.png");
+  // &:before {
+  //   position: absolute;
+  //   bottom: rem(-20px);
+  //   left: 28%;
+  //   content: url("../img/benefits/vector.png");
 
-    @include tablets {
-      left: 5%;
-    }
-  }
+  //   @include tablets {
+  //     left: 5%;
+  //   }
+  // }
 }
 
 .benefits {
