@@ -97,7 +97,8 @@
      
   &:hover + .product__values {
     cursor: pointer;
-    display: block;
+    //display: block;
+    opacity: 0.95;
     }
 
   @include tablets {
@@ -105,21 +106,28 @@
   }
 }
 
+.product__cont:hover > .product__values {
+  opacity: 0.95;
+}
+
 .product__values {
     //display: none;
-    position: relative;
     width: rem(273px);
     height: rem(294px);
-    background: #9A9A9A;
+    background: #fff;
     border-radius: 4px;
-    right: -18%;
-    margin-top: -23%;
+    right: 17%;
+    top: 4%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.7s;
 }
 
 .product__spec-value {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .product__spec-value__item {
