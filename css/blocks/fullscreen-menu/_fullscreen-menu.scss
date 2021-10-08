@@ -1,6 +1,8 @@
 .fullscreen-menu {
   @include tablets {
     position: fixed;
+    padding: 0;
+    margin: 0;
     top: 0;
     right: 0;
     left: 0;
@@ -12,50 +14,68 @@
     height: 100%;
     width: 100%;
     background: #313131;
+    list-style: none; 
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
   }
 }
 
-.fullscreen-menu .menu {
-  @include tablets {
-    display: block;
-  }
-}
-
-.menu--vertical {
+.menu-vertical {
   @include tablets {
    position: fixed;
    background: #313131; 
    color: white;
    font-size: rem(36px);
-   flex-direction: column;
-   flex-wrap: nowrap;
    width: rem(100px);
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   list-style-type: none;
+   text-decoration: none;
+   color: white;
  }
 }
-
-.menu--vertical .menu-list {
+ 
+.menu-vertical__item {
   @include tablets {
-    width: 100px;
-    flex-direction: column;
-    color: white;
-    flex-wrap: nowrap;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: rem(40px);
+   list-style: none;
+   list-style-type: none;
+   text-decoration: none;
+   width: 310px;
+   color: white;
+   padding: 0;
   }
 }
 
-.menu__item {
+.menu-vertical__list {
   @include tablets {
-    margin-bottom: rem(40px);
-    padding-top: 0;
-    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    width: 200px;
+    color: white;
+    padding: 0;
+    margin: 0;
   }
+  
 }
 
 .fullscreen-menu__close {
   display: block;
   position: relative;
-  width: 40px;
-  height: 40px;
-  right: -300px;
-  top: -300px;
+  width: rem(20px);
+  height: rem(20px);
+  right: -46%;
+  top: -47%;
   z-index: 5500000;
 }

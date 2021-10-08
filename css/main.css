@@ -1305,6 +1305,8 @@ img {
 @media screen and (max-width: 768px) {
   .fullscreen-menu {
     position: fixed;
+    padding: 0;
+    margin: 0;
     top: 0;
     right: 0;
     left: 0;
@@ -1325,58 +1327,85 @@ img {
     height: 100%;
     width: 100%;
     background: #313131;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .fullscreen-menu .menu {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .menu--vertical {
+  .menu-vertical {
     position: fixed;
     background: #313131;
     color: white;
     font-size: 2.25rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
     width: 6.25rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .menu--vertical .menu-list {
-    width: 100px;
+  .menu-vertical__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 2.5rem;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    width: 310px;
     color: white;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .menu__item {
-    margin-bottom: 2.5rem;
-    padding-top: 0;
-    margin-right: 0;
+  .menu-vertical__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    width: 200px;
+    color: white;
+    padding: 0;
+    margin: 0;
   }
 }
 
 .fullscreen-menu__close {
   display: block;
   position: relative;
-  width: 40px;
-  height: 40px;
-  right: -300px;
-  top: -300px;
+  width: 1.25rem;
+  height: 1.25rem;
+  right: -46%;
+  top: -47%;
   z-index: 5500000;
 }
