@@ -1029,8 +1029,8 @@ img {
 }
 
 .hamburger {
-  width: 26px;
-  height: 24px;
+  width: 1.625rem;
+  height: 1.5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1046,13 +1046,16 @@ img {
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
+  .hamburger--active {
+    display: none;
+  }
 }
 
 .hamburger__plank {
   display: block;
   background: #292929;
-  height: 4px;
-  border-radius: 10px;
+  height: 0.25rem;
+  border-radius: 0.625rem;
 }
 
 .products-section {
@@ -1331,6 +1334,11 @@ img {
     list-style-type: none;
     text-decoration: none;
     color: white;
+    left: 100%;
+  }
+  .fullscreen-menu--active {
+    left: 0;
+    position: fixed;
   }
 }
 
@@ -1400,12 +1408,22 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  a {
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+}
+
 .fullscreen-menu__close {
   display: block;
   position: relative;
   width: 1.25rem;
   height: 1.25rem;
-  right: -46%;
-  top: -47%;
-  z-index: 5500000;
+  right: -39%;
+  top: -45%;
 }

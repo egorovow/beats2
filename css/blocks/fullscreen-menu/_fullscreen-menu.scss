@@ -18,6 +18,12 @@
     list-style-type: none;
     text-decoration: none;
     color: white;
+    left: 100%; 
+
+    &--active {
+      left: 0;
+      position: fixed;
+    }
   }
 }
 
@@ -70,12 +76,22 @@
   
 }
 
+a {
+  @include tablets {
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: $white;
+  }
+}
+
 .fullscreen-menu__close {
   display: block;
   position: relative;
   width: rem(20px);
   height: rem(20px);
-  right: -46%;
-  top: -47%;
-  z-index: 5500000;
-}
+  right: -39%;
+  top: -45%;
+  }
