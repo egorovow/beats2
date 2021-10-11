@@ -12,7 +12,11 @@
       display: none; 
     }
   }
+  @include phones {
+    display: none;
+  }
 }
+
 
 .hamburger__plank {
   display: block;

@@ -1050,6 +1050,11 @@ img {
     display: none;
   }
 }
+@media screen and (max-width: 480px) {
+  .hamburger {
+    display: none;
+  }
+}
 
 .hamburger__plank {
   display: block;
