@@ -25,6 +25,10 @@
       position: fixed;
     }
   }
+
+  @include phones {
+    display: none;
+  }
 }
 
 .menu-vertical {

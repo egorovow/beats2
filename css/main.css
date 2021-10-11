@@ -1341,6 +1341,11 @@ img {
     position: fixed;
   }
 }
+@media screen and (max-width: 480px) {
+  .fullscreen-menu {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .menu-vertical {
