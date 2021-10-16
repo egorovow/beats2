@@ -1523,12 +1523,10 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 25.25rem;
 }
 @media screen and (max-width: 768px) {
   .team__item {
     position: relative;
-    height: 3.125rem;
   }
   .team__item_visible {
     height: 18.75rem;
@@ -1552,11 +1550,9 @@ p {
 .member__photo-logo {
   width: 13.75rem;
   height: 18.125rem;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
-  .member__photo-logo {
-    height: 0;
-  }
   .member__photo-logo_visible {
     height: 18.125rem;
     -webkit-transition: all 0.5s ease-in-out;
@@ -1591,11 +1587,24 @@ p {
   transition: all 0.5s ease-in-out;
 }
 .member__desc {
+  position: absolute;
+  top: 100%;
+  overflow: hidden;
   text-align: center;
   padding: 0rem 2rem;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  height: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.member__desc-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 .member__desc-title {
   color: #000;
@@ -1603,6 +1612,7 @@ p {
 }
 .member__desc-text {
   color: #666;
+  padding: 0 10%;
 }
 .member__desc_visible {
   opacity: 1;

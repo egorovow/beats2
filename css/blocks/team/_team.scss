@@ -42,11 +42,12 @@
 
   &__item {
     flex: 1;
-    height: rem(404px);
+    //position: relative;
+    //height: rem(404px);
 
     @include tablets {
       position: relative;
-      height: rem(50px);
+      //height: rem(50px);
 
       &_visible {
         height: rem(300px);
