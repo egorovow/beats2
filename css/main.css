@@ -792,6 +792,9 @@ p {
   border-radius: 0.25rem;
   border: 0.1875rem solid transparent;
 }
+.form__input.input-error {
+  border-color: hotpink;
+}
 @media screen and (max-width: 768px) {
   .form__input {
     padding: 3px 1px;
@@ -832,6 +835,12 @@ p {
 
 .form__btns {
   padding: 2.8125rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 768px) {
   .form__btns {
@@ -1133,6 +1142,12 @@ p {
     padding: 0;
   }
 }
+.products-slider .bx-wrapper {
+  border: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 
 .product__icon {
   width: 1.5rem;
@@ -1192,7 +1207,6 @@ p {
 .product__img {
   width: 100%;
   height: 28.25rem;
-  content: url("../img/products/ellipse.png");
 }
 @media screen and (max-width: 768px) {
   .product__img {
@@ -1574,6 +1588,7 @@ p {
   margin-top: 1.5625rem;
   margin-bottom: 0.6875rem;
   cursor: pointer;
+  position: relative;
 }
 .member__name-arrow {
   width: 0.5625rem;
@@ -1595,6 +1610,11 @@ p {
   height: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .member__desc {
+    position: relative;
+  }
 }
 .member__desc-block {
   display: -webkit-box;
@@ -1618,4 +1638,54 @@ p {
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+/*
+
+   Styles for animated modal
+   =========================
+
+*/
+/* Start state */
+.animated-modal {
+  max-width: 550px;
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.animated-modal h2,
+.animated-modal p {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+/* Final state */
+.fancybox-slide--current .animated-modal,
+.fancybox-slide--current .animated-modal h2,
+.fancybox-slide--current .animated-modal p {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+/* Reveal content with different delays */
+.fancybox-slide--current .animated-modal h2 {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.fancybox-slide--current .animated-modal p {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }

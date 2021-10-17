@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BEATS</title>
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -143,13 +145,15 @@
       <section class="section products-section">
         <div class="container">
           <div class="products-slider">
-              <a href="#" class="products-slider">
+             <a href="#" class="products-slider">
                 <img src="./img/products/left.png" alt="left icon" class="product__icon product__icon-left">
               </a>
               <ul class="products">
                 <li class="products__item product">
                   <div class="product__container">
-                    <div class="product__img"></div>
+                    <div class="product__img">
+                      <img src="./img/products/ellipse.png" alt="product icon">
+                    </div>
                     <div class="product__col">
                       <div class="product__cont">
                         <div class="product__spec">
@@ -211,11 +215,76 @@
                     </div>
                   </div>
                 </li>
+                <li class="products__item product">
+                  <div class="product__container">
+                    <div class="product__img">
+                      <img src="./img/products/ellipse2.png" alt="product icon">
+                    </div>
+                    <div class="product__col">
+                      <div class="product__cont">
+                        <div class="product__spec">
+                          <img src="./img/products/gear.png" alt="gear icon" class="gear__icon">
+                        </div>
+                        <div class="product__values">
+                          <ul class="product__spec-value">
+                            <li class="product__spec-value__item">
+                              <div class="product__spec-value__icon">
+                                <img src="./img/products/bluetooth.png" alt="bt icon" class="icon__value">
+                              </div>
+                              <div class="product__spec-value__text">Bluetooth</div>
+                              <div class="product__spec-value__elem">4.0</div>
+                            </li>
+                            <li class="product__spec-value__item">
+                              <div class="product__spec-value__icon">
+                                <img src="./img/products/nut.png" alt="bt icon" class="icon__value">
+                              </div>
+                              <div class="product__spec-value__text">Дальность</div>
+                              <div class="product__spec-value__elem">12</div>
+                            </li>
+                            <li class="product__spec-value__item">
+                              <div class="product__spec-value__icon">
+                                <img src="./img/products/almond.png" alt="bt icon" class="icon__value">
+                              </div>
+                              <div class="product__spec-value__text">Зарядка</div>
+                              <div class="product__spec-value__elem">3 часа</div>
+                            </li>
+                            <li class="product__spec-value__item">
+                              <div class="product__spec-value__icon">
+                                <img src="./img/products/washing-powder.png" alt="bt icon" class="icon__value">
+                              </div>
+                              <div class="product__spec-value__text">Вес</div>
+                              <div class="product__spec-value__elem">215 гр</div>
+                            </li>
+                            <li class="product__spec-value__item">
+                              <div class="product__spec-value__icon">
+                                <img src="./img/products/patent.png" alt="bt icon" class="icon__value">
+                              </div>
+                              <div class="product__spec-value__text">Гарантия</div>
+                              <div class="product__spec-value__elem">1 год</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="product__title">beats solo pro. цвет «красный цитрус»</div>
+                      <div class="product__text">
+                        Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и 
+                        поднесите к своему iPhone — они мгновенно подключатся к нему.
+                      </div>
+                      <div class="product__option-container">
+                        <div class="product__option-text">Зарядка <p><b>2 часа</b></p></div>
+                        <div class="product__option-text">Вес <p><b>215 грамм</b></p></div>
+                      </div>
+                      <div class="product__option-container">
+                        <div class="product__option-price">14 990 ₽</div>
+                        <a href="#" class="btn btn--color">Заказать</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
               <a href="#" class="products-slider">
                 <img src="./img/products/right.png" alt="right icon" class="product__icon product__icon-right">
               </a>
-            
           </div>
         </div>
       </section>
@@ -450,15 +519,16 @@
         <div class="container">
           <h2 class="section__title section__title-order">Закажите доставку</h2>
           <form class="form">
+            <input type="hidden" name="to" value="fffveswfvp@mail.com">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__title">Имя</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="name" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form__title">Телефон</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="phone" class="form__input">
                 </label>
               </div>
               <div class="form__row">
@@ -490,7 +560,7 @@
               <div class="form__row form__row--text">
                 <label class="form__block">
                   <div class="form__title">Комментарий</div>
-                  <textarea class="form__input form__input--textarea"></textarea>
+                  <textarea name="comment" class="form__input form__input--textarea"></textarea>
                 </label>
               </div>
               <div class="form__controls">
@@ -513,12 +583,36 @@
                 </label>
               </div>
               <div class="form__btns">
-                <input type="button" value="Заказать" class="btn btn--color">
+                <div class="card">
+                  <div class="card-body">
+                    <input type="submit" value="Заказать" class="btn btn--color">
+                    <a input data-fancybox data-src="#selectableModal" href="javascript:;"></a>
+
+                    <div style="display: none;max-width:500px;" id="selectableModal">
+                      <h2 data-selectable="true">Сообщение отправлено!</h2>
+                      <p><button data-fancybox-close class="btn btn--color">Закрыть</button></p>
+                    </div>
+                  </div>
+                </div>
+        
+                <!-- <input type="button" value="Заказать" class="btn btn--color"> -->
                 <input type="reset" value="Очистить" class="btn btn--transparent">
               </div>
             </div>
           </form>
         </div>
+        <!-- <div class="card">
+          <div class="card-body">
+            <p>
+              <a data-fancybox data-src="#selectableModal" href="javascript:;" class="btn btn--color">Заказать</a>
+            </p>
+    
+            <div style="display: none;max-width:500px;" id="selectableModal">
+              <h2 data-selectable="true">Сообщение отправлено!</h2>
+              <p><button data-fancybox-close class="btn btn--color">Закрыть</button></p>
+            </div>
+          </div>
+        </div> -->
       </section>
       <section class="section map-section"></section>
       <footer class="footer">
@@ -606,8 +700,12 @@
     </nav>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="scripts/fullscreenmenu.js"></script>
   <script src="scripts/teammenu.js"></script>
   <script src="scripts/reviews.js"></script>
+  <script src="scripts/slider.js"></script>
+  <script src="scripts/modal.js"></script>
 </body>
 </html>

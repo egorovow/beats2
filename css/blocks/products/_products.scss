@@ -37,6 +37,12 @@
     padding: 0;
   }
 
+  .bx-wrapper {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
 }
 
 .product__icon {
@@ -78,7 +84,7 @@
 .product__img {
   width: 100%;
   height: rem(452px);
-  content: url("../img/products/ellipse.png");
+  //content: url("../img/products/ellipse.png");
   
   @include tablets {
     width: rem(306px);

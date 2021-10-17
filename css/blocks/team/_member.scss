@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //position: relative;
+  
+  
   
   // &__photo {
   //   @include tablets {
@@ -35,7 +36,7 @@
     margin-top: rem(25px);
     margin-bottom: rem(11px);
     cursor: pointer;
-    //position: relative;
+    position: relative;
   }
 
   &__name-arrow {
@@ -53,14 +54,14 @@
     position: absolute;
     top: 100%;
     overflow: hidden;
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
     text-align: center;
     padding: rem(0px) rem(32px);
-    //opacity: 1;
     height: 0;
     transition: all .3s ease-in-out;
+
+      @include tablets {
+        position: relative;
+      }
 
       &-block {
         display: flex;
