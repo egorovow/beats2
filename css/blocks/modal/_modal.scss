@@ -18,7 +18,7 @@
 .animated-modal h2,
 .animated-modal p {
   transform: translateY(-50px);
-  opacity: 0;
+  opacity: 0; 
   
   transition-property: transform, opacity;
   transition-duration: .4s;
@@ -40,7 +40,7 @@
 .fancybox-slide--current .animated-modal p {
   transition-delay: .3s;
 }
-
+ 
 
 
 

@@ -1,15 +1,17 @@
 $('.form').submit (e=> {
   e.preventDefault();
-
+  
   const form = $(e.currentTarget);
   const name = form.find("[name='name']");
   const phone = form.find("[name='phone']");
   const comment = form.find("[name='comment']");
   const to = form.find("[name='to']");
 
-  const modal = $(".fancybox-container");
-  const content = modal.find(".fancybox-content");
+  const modal = $("#selectableModal");
+  const content = modal.find("[data-selectable=true]");
 
+  //modal.removeClass('error-modal');
+  
   [name, phone, comment, to].forEach (field => {
     field.removeClass("input-error");
     if (field.val().trim() == "") {
@@ -32,14 +34,26 @@ $('.form').submit (e=> {
       },
 
       success: data => {
+        //console.log (data);
         content.text(data.message);
 
         $.fancybox.open({
           src: "#selectableModal",
           type:"inline",
-         })
+         });
+      },
 
-      }
+      error: data => {
+        const message = data.responseJSON.message;
+        content.text(message);
+        //modal.addClass('error-modal');
+
+        $.fancybox.open({
+          src: "#selectableModal",
+          type:"inline",
+         });
+      },
     });
   }
+  e.target.reset();
 })
